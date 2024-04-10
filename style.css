@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    background: linear-gradient(150deg, #6C3483, #59D68D);
+    height: 100vh;
+}
+
+.formulario {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background: white;
+    border-radius: 12px;
+}
+
+.formulario h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    font-family: "Caveat", cursive;
+    font-size: 28px; /* Tamaño de fuente para pantallas grandes */
+}
+
+.formulario form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .username {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.username input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.username label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.username span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6C3483;
+    transition: .5s;
+}
+
+.username input:focus~label,
+.username input:focus~label {
+    top: -5px;
+    color: #6C3483;
+}
+
+.username input:focus~span::before,
+.username input:focus~span::before {
+    width: 100%;
+}
+
+.lineas {
+    display: flex;
+    align-items: center;
+}
+
+.lineas>div {
+    padding: 0 10px;
+}
+
+.lineas hr {
+    width: 50%;
+    background-color: rgb(221, 218, 218);
+}
+
+.recordar {
+    margin: 8px 0px 30px 55px;
+    color: blue;
+    cursor: pointer;
+}
+
+.recordar:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #6C3483;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    border-color: purple;
+    transition: .5s;
+}
+
+.registrarse {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.registrarse a {
+    color: blue;
+    text-decoration: none;
+}
+
+.registrarse a:hover {
+    text-decoration: underline;
+}
+
+.boton {
+    display: flex;
+    width: 100%;
+    height: min-content;
+    border: 2px solid #ded5d5;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+.google,
+.face,
+.telegram {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    max-width: 100%;
+}
+
+.boton p {
+    align-content: baseline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.formulario {
+    padding: 20px; 
+}
+
+.formulario form {
+    padding: 0 20px;
+}
+
+.username input {
+    font-size: 1em; 
+    padding: 0 10px; 
+}
+
+.username label {
+    font-size: 0.9em; 
+    left: 10px; 
+}
+
+.lineas hr {
+    margin: 0;
+}
+
+.recordar {
+    margin-left: 20px; 
+}
+
+input[type="submit"] {
+    font-size: 1em; 
+}
+
+.registrarse {
+    font-size: 0.9em; 
+    margin: 20px 0; 
+}
+
+.boton p {
+    font-size: 0.9em; 
+}
+
+@media (max-width: 600px) {
+    .formulario {
+        width: 90%;
+    }
+
+    .formulario h1 {
+        font-size: 24px; 
+    }
+
+    form .username {
+        margin: 20px 0; 
+    }
+
+    .username input {
+        height: 35px; 
+        font-size: 14px; 
+    }
+
+    .lineas hr {
+        width: 40%;
+    }
+
+    .recordar {
+        margin-left: 45px; 
+    }
+
+    input[type="submit"] {
+        height: 40px; 
+        font-size: 16px; 
+    }
+
+    .boton {
+        padding: 8px 16px;
+        font-size: 14px; 
+    }
+
+    .google,
+    .face,
+    .telegram {
+        width: 32px; 
+        height: 32px; 
+    }
+}
